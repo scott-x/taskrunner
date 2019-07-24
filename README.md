@@ -7,8 +7,9 @@ taskrunner for golang
 package main
 
 import (
-	"time"
 	"github.com/scott-x/taskrunner"
+	"log"
+	"time"
 )
 
 func main() {
@@ -33,8 +34,9 @@ func main() {
 		return nil
 	}
 
-	runner := NewRunner(30, false, d, e)
+	runner := taskrunner.NewRunner(30, false, d, e)
 	go runner.StartAll()
 	time.Sleep(1 * time.Second)
 }
+
 ```
